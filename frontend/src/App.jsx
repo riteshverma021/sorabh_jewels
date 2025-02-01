@@ -19,7 +19,7 @@ const App = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        `${import.meta.env.VITE_REACT_BACKEND_URL}/sourabhJewellers/items`,
+        "https://sorabh-jewels-1.onrender.com/sourabhJewellers/items",
         { params: { category } }
       );
       setData(response.data);
@@ -32,7 +32,7 @@ const App = () => {
 
   const fetchScheme = async () => {
     const response = await axios.get(
-      `${import.meta.env.VITE_REACT_BACKEND_URL}/luckydraw/getScheme`
+      "https://sorabh-jewels-1.onrender.com/luckydraw/getScheme"
     );
     setScheme(response.data);
   };
