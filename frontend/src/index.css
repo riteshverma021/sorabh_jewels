@@ -1,0 +1,36 @@
+@keyframes twinkle {
+    0%, 100% {
+      text-shadow: 0 0 5px rgb(255, 69, 0), 0 0 10px rgb(0, 255, 255), 0 0 20px #00ff00, 0 0 40px #ff00ff, 0 0 80px #ff00ff, 0 0 90px #ff00ff;
+    }
+    50% {
+      text-shadow: 0 0 5px rgb(218, 7, 7), 0 0 10px rgb(227, 47, 41), 0 0 20px #ff0, 0 0 40px #ff00ff, 0 0 80px #ff00ff, 0 0 90px #ff00ff;
+    }
+  }
+  
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.6;
+    }
+  }
+  
+  @keyframes shine {
+    0% {
+      background: linear-gradient(to right, #bb2d3b, #1d3c69, #3e5f5f);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    100% {
+      background: linear-gradient(to right, #3e5f5f, #1d3c69, #bb2d3b);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+  }
+  
+  .animate-twinkle {
+    animation: twinkle 1.5s infinite, blink 1s infinite, shine 2s infinite linear;
+  }
+  
+  
