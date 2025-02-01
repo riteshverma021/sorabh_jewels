@@ -9,7 +9,7 @@ const Display = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("https://sorabh-jewels-1.onrender.com/luckydraw/getScheme/items/main")
+      const response = await axios.get("https://sorabh-jewels-1.onrender.com/items/main")
       setData(response.data);
       console.log(response.data); // Debugging: Log the entire data array
     } catch (error) {
@@ -25,7 +25,7 @@ const Display = () => {
 
   const deleteItem = async (id) => {
     try {
-      await axios.delete(`https://sorabh-jewels-1.onrender.com/luckydraw/getScheme/items/${id}`, {
+      await axios.delete(`https://sorabh-jewels-1.onrender.com/items/${id}`, {
         withCredentials: true,
       });
       setData((prev) => prev.filter((item) => item._id !== id)); // Correctly filter the array
@@ -77,7 +77,7 @@ const Display = () => {
               >
              
                 <img
-                  src={`${import.meta.env.VITE_REACT_BACKEND_URL}/${item.image.url}`}
+                  src={`https://sorabh-jewels-1.onrender.com/${item.image.url}`}
                   alt={item.name}
                   className="w-16 h-16 object-cover rounded-lg border"
                 />
