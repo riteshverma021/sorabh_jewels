@@ -19,7 +19,7 @@ const Navbar = () => {
       <h1 
   className="text-3xl font-bold  italic  text-white font-mono tracking-wide shadow-lg"
 >
-  Sourabh Jewellers
+  Sorabh Jewellers
 </h1>
 
       </div>

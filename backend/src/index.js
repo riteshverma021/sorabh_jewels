@@ -1,3 +1,9 @@
+
+import dotenv from 'dotenv';
+
+// Load environment variables
+dotenv.config();
+
 import express from "express"
 import mongoose from "mongoose"
 import bodyParser from "body-parser"
@@ -12,7 +18,7 @@ const port = 1002
 
 
 //middlewares 
-const allowedOrigins = ["http://localhost:5173", "http://localhost:5174"];
+const allowedOrigins = [process.env.VITE_FRONTEN_URL];
 app.use(cors({
     origin:allowedOrigins ,
 

@@ -45,7 +45,7 @@ const Upload = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:1002/items/addNew", formData, {
+      const response = await axios.post(`${import.meta.env.VITE_REACT_BACKEND_URL}/items/addNew`, formData, {
         withCredentials: true,
         headers: { "Content-Type": "multipart/form-data" },
       });

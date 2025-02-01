@@ -42,7 +42,7 @@ const SchemUpload = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:1002/luckydraw/scheme",
+        `${import.meta.env.VITE_REACT_BACKEND_URL}/luckydraw/scheme`,
         formData,
         {
           withCredentials: true,

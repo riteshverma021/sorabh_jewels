@@ -19,7 +19,7 @@ const App = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:1002/sourabhJewellers/items",
+        `${import.meta.env.VITE_REACT_BACKEND_URL}/sourabhJewellers/items`,
         { params: { category } }
       );
       setData(response.data);
@@ -32,7 +32,7 @@ const App = () => {
 
   const fetchScheme = async () => {
     const response = await axios.get(
-      "http://localhost:1002/luckydraw/getScheme"
+      `${import.meta.env.VITE_REACT_BACKEND_URL}/luckydraw/getScheme`
     );
     setScheme(response.data);
   };
@@ -64,7 +64,7 @@ const App = () => {
         ) : (
           scheme && (
             <img
-              src={`http://localhost:1002/${scheme.image.url}`}
+              src={`${import.meta.env.VITE_REACT_BACKEND_URL}/${scheme.image.url}`}
               alt="Lucky Draw Scheme"
               className="mx-auto mt-6 rounded-lg shadow-lg max-w-md"
             />
@@ -103,7 +103,7 @@ const App = () => {
               className="group bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 transition duration-300 ease-in-out hover:shadow-2xl transform hover:scale-105"
             >
               <img
-                src={`http://localhost:1002/${item.image.url}`}
+                src={`${import.meta.env.VITE_REACT_BACKEND_URL}/${item.image.url}`}
                 alt={item.name}
                 className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
               />
