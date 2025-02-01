@@ -42,7 +42,7 @@ const SchemUpload = () => {
 
     try {
       const response = await axios.post(
-        `${import.meta.env.VITE_REACT_BACKEND_URL}/luckydraw/scheme`,
+       "https://sorabh-jewels-1.onrender.com/luckydraw/getScheme/luckydraw/scheme",
         formData,
         {
           withCredentials: true,
