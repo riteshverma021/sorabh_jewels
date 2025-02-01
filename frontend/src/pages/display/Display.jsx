@@ -9,7 +9,7 @@ const Display = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get(`${import.meta.env.VITE_REACT_BACKEND_URL}/items/main`)
+      const response = await axios.get("https://sorabh-jewels-1.onrender.com/luckydraw/getScheme/items/main")
       setData(response.data);
       console.log(response.data); // Debugging: Log the entire data array
     } catch (error) {
@@ -25,7 +25,7 @@ const Display = () => {
 
   const deleteItem = async (id) => {
     try {
-      await axios.delete(`${import.meta.env.VITE_REACT_BACKEND_URL}/items/${id}`, {
+      await axios.delete(`https://sorabh-jewels-1.onrender.com/luckydraw/getScheme/items/${id}`, {
         withCredentials: true,
       });
       setData((prev) => prev.filter((item) => item._id !== id)); // Correctly filter the array
